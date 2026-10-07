@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Верхняя часть -->
+        <header>
+            <div>
+                <h1>PetCare 🐾</h1>
+                <p>Помощник владельца питомца</p>
+            </div>
+
+            <div class="profile-icon">👤</div>
+        </header>
+
+
+        <!-- Приветствие -->
+        <section class="welcome">
+            <h2>Привет! 👋</h2>
+            <p>Как Барни сегодня?</p>
+        </section>
+
+
+        <!-- Карточка питомца -->
+        <section class="pet-card">
+
+            <div class="pet-photo">
+                🐶
+            </div>
+
+            <div class="pet-info">
+                <h2>Барни</h2>
+                <p>Золотистый ретривер</p>
+
+                <div class="pet-details">
+                    <span>🎂 3 года</span>
+                    <span>⚖️ 28 кг</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Сегодня -->
+        <section class="today">
+
+            <h2>Сегодня</h2>
+
+            <div class="task">
+                <div class="task-icon">🍖</div>
+
+                <div class="task-info">
+                    <h3>Кормление</h3>
+                    <p>Пора покормить Барни</p>
+                </div>
+
+                <strong>19:00</strong>
+            </div>
+
+
+            <div class="task">
+                <div class="task-icon">🚶</div>
+
+                <div class="task-info">
+                    <h3>Прогулка</h3>
+                    <p>Вечерняя прогулка</p>
+                </div>
+
+                <strong>20:00</strong>
+            </div>
+
+
+            <div class="task">
+                <div class="task-icon">💊</div>
+
+                <div class="task-info">
+                    <h3>Витамины</h3>
+                    <p>Дать витамины</p>
+                </div>
+
+                <strong>21:00</strong>
+            </div>
+
+        </section>
+
+<!-- Страница питомца -->
+
+<section class="pet-page" id="petPage">
+
+    <div class="page-header">
+        <button onclick="showHome()">←</button>
+
+        <h2>Мой питомец</h2>
+    </div>
+
+
+    <div class="pet-big-card">
+
+        <div class="pet-big-photo" id="petPhoto">
+            🐶
+        </div>
+
+        <h2 id="petName">Барни</h2>
+
+        <p id="petBreed">Золотистый ретривер</p>
+
+    </div>
+
+
+    <div class="pet-data">
+
+        <div class="data-item">
+            <span>🎂</span>
+
+            <div>
+                <small>Возраст</small>
+                <strong id="petAge">3 года</strong>
+            </div>
+        </div>
+
+
+        <div class="data-item">
+            <span>⚖️</span>
+
+            <div>
+                <small>Вес</small>
+                <strong id="petWeight">28 кг</strong>
+            </div>
+        </div>
+
+    </div>
+
+
+    <button class="edit-button" onclick="openPetForm()">
+        ✏️ Изменить данные
+    </button>
+
+</section>
+
+
+<!-- Форма добавления питомца -->
+
+<section class="pet-form" id="petForm">
+
+    <div class="page-header">
+
+        <button onclick="closePetForm()">←</button>
+
+        <h2>Данные питомца</h2>
+
+    </div>
+
+
+    <label>Имя питомца</label>
+
+    <input
+        type="text"
+        id="nameInput"
+        placeholder="Например, Барни"
+    >
+
+
+    <label>Порода</label>
+
+    <input
+        type="text"
+        id="breedInput"
+        placeholder="Например, корги"
+    >
+
+
+    <label>Вес</label>
+
+    <input
+        type="number"
+        id="weightInput"
+        placeholder="Вес в кг"
+    >
+
+
+    <label>Тип животного</label>
+
+    <select id="animalInput">
+
+        <option value="🐶">Собака 🐶</option>
+
+        <option value="🐱">Кошка 🐱</option>
+
+        <option value="🐰">Кролик 🐰</option>
+
+        <option value="🐹">Хомяк 🐹</option>
+
+        <option value="🐦">Птица 🐦</option>
+
+    </select>
+
+
+    <button class="save-button" onclick="savePet()">
+        💾 Сохранить
+    </button>
+
+</section>
+        <!-- Нижнее меню -->
+        <nav class="bottom-menu">
+
+            <a href="#" class="active">
+                <span>🏠</span>
+                Главная
+            </a>
+
+            <a href="#" onclick="showPet()">
+    <span>🐾</span>
+    Питомец
+</a>
+
+            <a href="#">
+                <span>❤️</span>
+                Здоровье
+            </a>
+
+            <a href="#">
+                <span>🔔</span>
+                Напоминания
+            </a>
+
+            <a href="#">
+                <span>👤</span>
+                Профиль
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
